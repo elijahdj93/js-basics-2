@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    'name': 'cheese',
+    'price': 10,
+    'category': 'entre',
+    'popularity': 8,
+    'rating': 9,
+    'tags': ['gluten-free', 'dinner', 'lunch', 'family']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+const {price} = pizza;
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+const {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +97,48 @@
 */
 
 //CODE HERE
-
+let foodArr = [
+    {
+        'name': 'minestrone',
+        'price': 8,
+        'category': 'appetizer',
+        'popularity': 7,
+        'rating': 6,
+        'tags': ['gluten-free', 'dinner', 'lunch', 'single']  
+    },
+    {
+        'name': 'spaghetti',
+        'price': 12,
+        'category': 'entre',
+        'popularity': 10,
+        'rating': 8,
+        'tags': ['gluten-free', 'dinner', 'lunch', 'family']
+    },
+    {
+        'name': 'lasagna',
+        'price': 15,
+        'category': 'entre',
+        'popularity': 9,
+        'rating': 9,
+        'tags': ['gluten-free', 'dinner', 'lunch', 'single']
+    },
+    {
+        'name': 'tortellini',
+        'price': 10,
+        'category': 'appetizer',
+        'popularity': 3,
+        'rating': 4,
+        'tags': ['gluten-free', 'dinner', 'lunch', 'single']
+    },
+    {
+        'name': 'gelato',
+        'price': 8,
+        'category': 'desert',
+        'popularity': 9,
+        'rating': 10,
+        'tags': ['gluten-free', 'dinner', 'lunch', 'single']
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -104,8 +154,23 @@
 */
 
 //CODE HERE
+// let tagFilter = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i].tags.includes('family')) {
+//                return arr[i]
+//         }
+//     }
+// }
+// console.log(tagFilter(foodArr))
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+// function tagFilter(ele) {
+//     return (ele.tags.includes('family'))
+// }
+// const filteredFood = foodArr.filter(tagFilter)
+
+const filteredFood = foodArr.filter(ele => ele.tags.includes('family'))
+
+console.log(filteredFood)
 
 
 
@@ -149,6 +214,9 @@
 */
 
 //CODE HERE
+function filterByProperty(property, num, type) {
+    
+}
 
 
 /*
