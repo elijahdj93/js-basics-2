@@ -66,8 +66,7 @@ empOne.getSchedule()
 */
 
 //CODE HERE
-
-
+let empTwo = {...empOne};
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -93,7 +92,21 @@ empOne.getSchedule()
 */
 
 //CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+        super(name, shifts)
 
+        this.employees = employees
+    }
+
+    getEmployees(){
+        console.log(this.name, `manages`, this.employees)
+    }
+
+    addEmployee(emp){
+        this.employees.push(emp)
+    }
+}
 
 
 /*
@@ -108,7 +121,7 @@ empOne.getSchedule()
 */
 
 //CODE HERE
-
+let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', 'Cece and Schmidt')
 
 /*
     Call the `getEmployees` method on the
@@ -116,6 +129,7 @@ empOne.getSchedule()
 */
 
 //CODE HERE
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -124,6 +138,7 @@ empOne.getSchedule()
 */
 
 //CODE HERE 
+manager.addEmployee('Coach')
 
 /*
     Call the `getEmployees` method on the
@@ -132,3 +147,4 @@ empOne.getSchedule()
 */
 
 //CODE HERE
+manager.getEmployees()
