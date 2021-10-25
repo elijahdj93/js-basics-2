@@ -213,11 +213,30 @@ console.log(filteredFood)
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+//CODE HERE price, 10, above
+let newFoodArr = [];
 function filterByProperty(property, num, type) {
-    
-}
+    if (type === 'above') {
+        for (let i = 0; i < foodArr.length; i++) {
+            if (foodArr[i].property > num) {
+                 newFoodArr.push(foodArr[i])
+                 
+            }
+        }
+    }
+} 
+    console.log(newFoodArr)
+    // const filteredFood3 = foodArr.filter(filterByProperty)
+// // filterByProperty(price, 10, 'above')
+// console.log(filteredFood3)
 
+// let newFoodArr = []
+// for (let i = 0; i < foodArr.length; i++) {
+//     if (foodArr[i].price > 10) {
+//         newFoodArr.push(foodArr[i])
+//     }
+// }
+// console.log(newFoodArr)
 
 /*
     Invoke the `filterByProperty` function passing
