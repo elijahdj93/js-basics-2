@@ -96,7 +96,7 @@ class Manager extends Employee {
     constructor(name, shifts, employees) {
         super(name, shifts)
 
-        this.employees = employees
+        this.employees = [employees]
     }
 
     getEmployees(){
